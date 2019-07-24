@@ -14,6 +14,7 @@
 
       {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
       <title>{{ collectiondata.title }} - {{ site.title }}</title>
+      <meta charset="UTF-8">
       <meta property="og:title" content="{{ collectiondata.title }}">
       <meta name="description" content="{{ collectiondata.description }}">
       <meta property="og:description" content="{{ collectiondata.description }}">
@@ -39,7 +40,7 @@
 
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
     {% include site-icons.svg %}
-    <h1>abc</h1>
+
     {{ content }}
 
     {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
